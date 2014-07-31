@@ -1,4 +1,4 @@
-$(".videoWrapper").html(function() {
+$(document).ready(function() {
 
         //Create the array with the video identifiers.
         var numbers = [
@@ -18,7 +18,7 @@ $(".videoWrapper").html(function() {
               temp = this[i];
               this[i] = this[j]; 
               this[j] = temp;
-           }
+            }
         }
 
         Array.prototype.shuffle = arrayShuffle;
@@ -27,11 +27,11 @@ $(".videoWrapper").html(function() {
             var consoleLine = '<div class=\"col-sm-2\"></div>';
      
     
-    /*console = {
+    console = {
         log: function (text) {
-            $("#console-log").append($(consoleLine).html(text));
+            $(".row").append($(consoleLine).html(text));
         }
-    };*/
+    };
 
     document.write('<iframe width="840px" height="480px" src="http://www.youtube.com/embed/' + numbers.pop() + '" frameborder="0" allowfullscreen></iframe>');
     document.write('<iframe width="840px" height="480px" src="http://www.youtube.com/embed/' + numbers.pop() + '" frameborder="0" allowfullscreen></iframe>');
