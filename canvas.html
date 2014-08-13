@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Video to use:</p>
+<video id="video1" controls width="270" autoplay>
+  <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type='video/mp4'>
+
+</video>
+
+<p>Canvas (the code draws the current frame of the video every 20 millisecond):</p>
+<canvas id="myCanvas" width="270" height="135" style="border:1px solid #333;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+
+var v = document.getElementById("video1");
+var c = document.getElementById("myCanvas");
+ctx = c.getContext('2d');
+
+width = v.width;
+height = v.height;
+ctx.translate(50,50);
+ctx.rotate(0.05);
+window.setInterval(drawFrame, 1000/24);
+
+function drawFrame() {
+  ctx.drawImage(v, 0, 0, width, height);
+}
+
+</script>
+
+</body>
+</html>

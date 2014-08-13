@@ -1,5 +1,5 @@
 body {
-	background: #54375C;
+	background: #333;
 	margin: 0;
 	color: #91688C;
 	font-family: Arial;
@@ -19,6 +19,9 @@ body {
 	border: 1px solid #91688C;
 	margin: 5px;
 	line-height: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 .departments .department.selection {
 	color: #fff;
